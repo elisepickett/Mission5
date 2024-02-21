@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Piano Lesson Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Piano Lesson Page</h2>
+
+<div class="lesson-scheduler">
+    <h3>Schedule Your Piano Lessons</h3>
+    <form id="lessonForm">
+        <label>Frequency:</label>
+        <select id="frequencySelect">
+            <option value="weekly">Weekly</option>
+            <option value="biweekly">Biweekly</option>
+        </select>
+        <br />
+        <label>Location:</label>
+        <select id="locationSelect">
+            <option value="your-house">At My House</option>
+            <option value="customer-house">At Customer's House</option>
+        </select>
+        <br />
+        <label>Payment Method:</label>
+        <select id="paymentSelect">
+            <option value="monthly">Monthly</option>
+            <option value="per-lesson">Pay per Lesson</option>
+        </select>
+    </form>
+</div>
+
+<div class="lesson-calculator">
+    <h3>Lesson Calculator</h3>
+    <label for="hoursInput">Enter number of hours:</label>
+    <input type="number" id="hoursInput" min="1">
+    <br />
+    <label for="hourlyRate">Hourly rate:</label>
+    <input type="text" id="hourlyRate" value="$35" readonly>
+    <br />
+    <button id="calculateButton">Calculate Total</button>
+    <br />
+    <div id="totalOutput"></div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#calculateButton').click(function () {
+                var hours = parseFloat($('#hoursInput').val());
+
+                if (isNaN(hours) || hours <= 0) {
+                    alert('Please enter a valid positive number of hours.');
+                    return;
+                }
+
+                var hourlyRate = 35;
+                var total = hours * hourlyRate;
+
+                $('#totalOutput').text('Total: $' + total.toFixed(2));
+            });
+        });
+    </script>
+}
+

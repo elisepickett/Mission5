@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\littlepianoicon.jpeg" />
+    <None Include="wwwroot\img\piano.jpeg" />
+    <None Include="wwwroot\img\sheetmusicheart.jpeg" />
+  </ItemGroup>
+
 </Project>

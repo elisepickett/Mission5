@@ -1,8 +1,54 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Piano Hobby";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - My Piano Hobby</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <!-- Add your custom CSS styles here -->
+    <style>
+        /* Add your custom CSS styles */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to My Piano Hobby Page</h1>
+            <img src="~/img/piano.jpeg" alt="Piano Image" class="img-fluid" style="max-width: 400px; margin-top: 20px;">
+            <img src="~/img/sheetmusicheart.jpeg" alt="Piano Image" class="img-fluid" style="max-width: 400px; margin-top: 20px;">
+        </div>
+        <div class="content">
+            <h2>About My Piano Hobby</h2>
+            <p>
+                Playing the piano is not just a hobby for me; it's a passion. I have been playing the piano for several years now and it brings me immense joy and satisfaction. The piano allows me to express myself creatively and emotionally through music.
+            </p>
+            <p>
+                Whether it's classical pieces by Chopin and Beethoven or modern tunes by contemporary artists, I love exploring various genres and styles on the piano. The feeling of mastering a challenging piece or improvising melodies is incredibly rewarding.
+            </p>
+            <p>
+                Apart from playing solo, I also enjoy collaborating with other musicians and performing in concerts and recitals. The piano has opened doors to new friendships and opportunities, enriching my life in countless ways.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
